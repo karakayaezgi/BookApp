@@ -1,0 +1,70 @@
+
+body{
+    font-family: "Schoolbell", cursive;
+}
+:root {
+  --navbar-height: 90px;
+}
+.top-offset {
+  top: var(--navbar-height);
+  z-index: 1010;
+}
+.navbar-sticky{
+    z-index: 1020;
+}
+
+.carousel,
+.carousel-inner,
+.carousel-item {
+    height: 350px;
+}
+
+
+.book-img {
+    height: 350px;
+    object-fit: cover;
+}
+
+.overlay {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-item:hover .overlay {
+    opacity: 0.6;
+}
+
+.buttons {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.carousel-item:hover .buttons {
+    opacity: 1;
+}
+.menu{
+    display: none;
+    opacity: 0;
+}
+.select{
+    display: block;
+}
+.subject{
+    max-height: 350px;
+    overflow-y: auto; /*scroll dersek scrol hep var olur ux kullanıcı deneyimi :( auto dersen gerektiginde scrolu gosterir.*/
+}
+
+@media (max-width: 576px) {
+  .menu{
+    opacity: 1;
+    display: block;
+  }
+  .select{
+    display: none;
+    opacity: 0;
+  }
+  
+}
